@@ -1,0 +1,926 @@
+{
+  "analysis": [
+    {
+      "stakeholder": "Missing child",
+      "goals": [
+        {
+          "goal_id": "G1",
+          "goal": "Be located and returned to safety as quickly as possible."
+        },
+        {
+          "goal_id": "G2",
+          "goal": "Avoid being wrongly identified or publicly exposed in ways that cause stress, detention, or reputational harm."
+        },
+        {
+          "goal_id": "G3",
+          "goal": "Have identifying images and location information kept private except when legitimately needed for the search."
+        },
+        {
+          "goal_id": "G4",
+          "goal": "Avoid secondary harms from reuse or prolonged retention of their images or location data (e.g., stalking, exploitation, discrimination)."
+        }
+      ],
+      "hazards": [
+        {
+          "hazard_id": "H1",
+          "goal_id": "G1",
+          "loss": "Searches fail to surface relevant sightings or do so too slowly, delaying investigators and reducing the chance of timely recovery.",
+          "requirement_id": "REQ1",
+          "requirement": "Relevant sightings of the missing child are made available to authorized search coordinators within an operationally useful time window so that perishable leads can be followed before they expire."
+        },
+        {
+          "hazard_id": "H2",
+          "goal_id": "G2",
+          "loss": "People who are not the missing child are treated as confirmed sightings, leading to wrongful stops, public exposure, emotional distress, or other harms to the child and their family.",
+          "requirement_id": "REQ2",
+          "requirement": "People who do not match the missing child are not presented to investigators or third parties as confirmed sightings based solely on automated outputs; any reported sighting relied upon for actions that affect the child's liberty or privacy must be corroborated by independent human verification."
+        },
+        {
+          "hazard_id": "H3",
+          "goal_id": "G3",
+          "loss": "Identifying images or location information from dashcam footage are accessed or shared with unauthorized parties, enabling stalking, exploitation, or unwanted media exposure of the child.",
+          "requirement_id": "REQ3",
+          "requirement": "Identifying images and location information of the missing child are accessible only to authorized search personnel and designated partner organizations, and are not disclosed to unauthorized individuals or services."
+        },
+        {
+          "hazard_id": "H4",
+          "goal_id": "G4",
+          "loss": "Footage containing the child's likeness is retained or repurposed for unrelated uses, creating long-term privacy, safety, or discrimination risks to the child.",
+          "requirement_id": "REQ4",
+          "requirement": "Recorded footage or images containing the missing child's likeness are not used for purposes unrelated to the active search and are rendered inaccessible for other uses after the search concludes or as required by applicable retention policies and legal protections."
+        }
+      ]
+    },
+    {
+      "stakeholder": "Parent or legal guardian",
+      "goals": [
+        {
+          "goal_id": "G1",
+          "goal": "Locate the missing child quickly by receiving timely and relevant sightings."
+        },
+        {
+          "goal_id": "G2",
+          "goal": "Protect the child's and family's privacy and control over images and location data."
+        },
+        {
+          "goal_id": "G3",
+          "goal": "Avoid wrongful identification of people that leads to distress, wasted resources, or legal exposure."
+        },
+        {
+          "goal_id": "G4",
+          "goal": "Prevent misuse of images or location data for stalking, harassment, or public exposure."
+        },
+        {
+          "goal_id": "G5",
+          "goal": "Avoid unexpected financial, battery, or storage burdens on personal devices that impede participation in the search."
+        }
+      ],
+      "hazards": [
+        {
+          "hazard_id": "H1",
+          "goal_id": "G1",
+          "loss": "Delays or failures to detect the child in dashcam footage lead to missed opportunities to locate the child and delayed search response.",
+          "requirement_id": "REQ1",
+          "requirement": "When the missing child appears in recorded or live dashcam footage, authorized investigators and the reporting parent receive relevant sightings (including timestamps and location) within an acceptable time window to support timely search actions."
+        },
+        {
+          "hazard_id": "H2",
+          "goal_id": "G3",
+          "loss": "Automated misidentification causes innocent people to be treated as matches, resulting in false leads, reputational harm, harassment, or wasted investigative resources for the parent and authorities.",
+          "requirement_id": "REQ2",
+          "requirement": "People who do not match the missing child are not treated as confirmed sightings or actionable leads solely based on an automated prediction; only human-verified sightings are advanced as confirmed leads to investigators or the public."
+        },
+        {
+          "hazard_id": "H3",
+          "goal_id": "G2",
+          "loss": "Reference photos or dashcam footage are exposed to unauthorized parties, enabling privacy violations, harassment, or downstream misuse of identifying images of the child or family.",
+          "requirement_id": "REQ3",
+          "requirement": "Unauthorized parties do not gain access to identifying images, footage, or location information related to the missing child or the reference photos provided by the parent."
+        },
+        {
+          "hazard_id": "H4",
+          "goal_id": "G4",
+          "loss": "Images or location information are reused or distributed beyond the coordinated search, enabling stalking, extortion, or other targeted harms against the child or family.",
+          "requirement_id": "REQ4",
+          "requirement": "Identifying images, live location, and location-linked data are not disclosed to third parties outside the coordinated search team (authorized investigators and designated non-profit personnel) for purposes that enable stalking, harassment, or public dissemination."
+        },
+        {
+          "hazard_id": "H5",
+          "goal_id": "G5",
+          "loss": "Search activities impose unexpected mobile-data charges, drain device battery, or consume storage on the parent's devices, creating financial burden or preventing the parent from communicating or participating in the search.",
+          "requirement_id": "REQ5",
+          "requirement": "Search operations that involve a parent's devices do not cause unanticipated monetary charges, excessive battery depletion, or storage exhaustion on those devices that would prevent the parent from participating in search activities or essential communications."
+        }
+      ]
+    },
+    {
+      "stakeholder": "Dashcam owner / vehicle owner",
+      "goals": [
+        {
+          "goal_id": "G1",
+          "goal": "Maintain control over who can access or receive dashcam footage and associated location information."
+        },
+        {
+          "goal_id": "G2",
+          "goal": "Avoid unexpected financial costs and excessive use of device resources (mobile data, battery, storage) from search activities."
+        },
+        {
+          "goal_id": "G3",
+          "goal": "Avoid being implicated, harassed, or legally exposed due to false or incorrect person-recognition results."
+        },
+        {
+          "goal_id": "G4",
+          "goal": "Ensure dashcam operation does not compromise vehicle operability or driver safety."
+        }
+      ],
+      "hazards": [
+        {
+          "hazard_id": "H1",
+          "goal_id": "G1",
+          "loss": "Identifying images or precise location data from the dashcam are accessed or shared with third parties without the owner's consent, causing privacy invasion, stalking, or reputational harm.",
+          "requirement_id": "REQ1",
+          "requirement": "Identifying images and precise location information from the dashcam are not accessible to or shared with third parties except when the owner has explicitly permitted that specific access or sharing."
+        },
+        {
+          "hazard_id": "H2",
+          "goal_id": "G2",
+          "loss": "Unexpected mobile data charges, depleted storage, or excessive battery use occur because of search-related uploads or prolonged processing, causing financial loss or loss of recording capability.",
+          "requirement_id": "REQ2",
+          "requirement": "Any data transfers or operations that would consume the owner's metered cellular data, substantially exceed the owner's available storage, or significantly drain the device battery occur only with the owner's explicit consent or within the owner's configured data, storage, and power limits."
+        },
+        {
+          "hazard_id": "H3",
+          "goal_id": "G3",
+          "loss": "Automated person-recognition produces false matches that lead authorities or others to treat innocent people recorded by the owner's dashcam as confirmed sightings, resulting in investigations, confrontations, or legal exposure for the owner.",
+          "requirement_id": "REQ3",
+          "requirement": "People who are not the missing child are not reported to investigators or treated as confirmed sightings solely on the basis of automated person-recognition outputs."
+        },
+        {
+          "hazard_id": "H4",
+          "goal_id": "G4",
+          "loss": "Dashcam search operations deplete the vehicle battery or consume critical device resources so the vehicle cannot start or essential driving functions are impaired, creating safety risks or significant inconvenience for the owner.",
+          "requirement_id": "REQ4",
+          "requirement": "Search operations do not cause vehicle battery level or availability of critical vehicle systems to fall below the levels required for normal vehicle start-up and safe operation given the owner's configured power and performance preferences."
+        }
+      ]
+    },
+    {
+      "stakeholder": "Vehicle occupants and passengers",
+      "goals": [
+        {
+          "goal_id": "G1",
+          "goal": "Control over personal images and location data collected by the dashcam"
+        },
+        {
+          "goal_id": "G2",
+          "goal": "Not being wrongfully identified or subjected to law-enforcement or investigatory action because of automated matches"
+        },
+        {
+          "goal_id": "G3",
+          "goal": "Avoiding unexpected monetary or resource burdens (mobile data, battery, storage) caused by search operations"
+        },
+        {
+          "goal_id": "G4",
+          "goal": "Protection from unauthorized access, secondary use, or misuse of recorded footage and derived results"
+        }
+      ],
+      "hazards": [
+        {
+          "hazard_id": "H1",
+          "goal_id": "G1",
+          "loss": "Vehicle occupants are recorded, and their images or location history are retained or disclosed without their consent, enabling unwanted surveillance or exposure of private activities.",
+          "requirement_id": "REQ1",
+          "requirement": "Images and location information of vehicle occupants are not disclosed to investigators, third parties, or other external parties without the occupants' consent or a verified lawful request."
+        },
+        {
+          "hazard_id": "H2",
+          "goal_id": "G2",
+          "loss": "Occupants are falsely identified as the missing child and subjected to interrogation, detention, reputational damage, or emotional distress due to an automated match.",
+          "requirement_id": "REQ2",
+          "requirement": "People who are not the missing child are not treated as confirmed sightings or subjected to investigatory action solely on the basis of automated person-recognition outputs."
+        },
+        {
+          "hazard_id": "H3",
+          "goal_id": "G3",
+          "loss": "Search activities consume occupants' mobile data, battery, or storage unexpectedly, causing monetary charges, loss of critical device function, or reduced safety during travel.",
+          "requirement_id": "REQ3",
+          "requirement": "Search operations do not consume occupants' mobile data allowance, significant battery capacity, or device storage without prior, informed consent from the affected occupants."
+        },
+        {
+          "hazard_id": "H4",
+          "goal_id": "G4",
+          "loss": "Unauthorized parties—including contractors, attackers, or other third parties—gain access to identifying footage or search results and use them for stalking, blackmail, discrimination, or other harms.",
+          "requirement_id": "REQ4",
+          "requirement": "Unauthorized parties do not gain access to identifying images or location information from dashcam recordings or from search results."
+        }
+      ]
+    },
+    {
+      "stakeholder": "Law enforcement agencies / police investigators",
+      "goals": [
+        {
+          "goal_id": "G1",
+          "goal": "Obtain timely, actionable leads so investigators can follow up during critical early search windows."
+        },
+        {
+          "goal_id": "G2",
+          "goal": "Minimize false leads and avoid misidentification of innocent people to preserve investigative resources and protect civilians."
+        },
+        {
+          "goal_id": "G3",
+          "goal": "Preserve evidentiary integrity and provable provenance so information can be validated and used in legal processes."
+        },
+        {
+          "goal_id": "G4",
+          "goal": "Protect sensitive imagery and location data to prevent unauthorized disclosure that could endanger individuals or compromise investigations."
+        }
+      ],
+      "hazards": [
+        {
+          "hazard_id": "H1",
+          "goal_id": "G1",
+          "loss": "Investigators receive sightings too late to act effectively, causing missed opportunities to locate the missing child.",
+          "requirement_id": "REQ1",
+          "requirement": "Investigators receive relevant sightings within a timeframe appropriate for active missing-child searches (i.e., hours rather than days) so that follow-up actions can be initiated while search windows remain viable."
+        },
+        {
+          "hazard_id": "H2",
+          "goal_id": "G2",
+          "loss": "High rates of false positives lead to wasted investigator time, diversion of resources, and potential reputational or emotional harm to innocent people contacted as suspected sightings.",
+          "requirement_id": "REQ2",
+          "requirement": "People who do not match the missing child are not reported to investigators as confirmed sightings solely because of an automated prediction; reported items to investigators are presented as leads that require independent validation."
+        },
+        {
+          "hazard_id": "H3",
+          "goal_id": "G3",
+          "loss": "Reported footage or metadata lack verifiable provenance, causing evidence to be inadmissible or unusable for formal investigation and legal proceedings.",
+          "requirement_id": "REQ3",
+          "requirement": "Each sighting reported to investigators is accompanied by verifiable contextual information (such as original capture time, location reference, and a traceable record of handling) sufficient for investigators to validate provenance and document chain-of-possession for investigative and legal use."
+        },
+        {
+          "hazard_id": "H4",
+          "goal_id": "G4",
+          "loss": "Unauthorized access to identifying images or location information exposes the child or other parties to privacy violations, harassment, or interference with the investigation.",
+          "requirement_id": "REQ4",
+          "requirement": "Unauthorized parties do not gain access to identifying images, footage, or location information related to missing-child searches."
+        }
+      ]
+    },
+    {
+      "stakeholder": "Non-profit child-safety organization",
+      "goals": [
+        {
+          "goal_id": "G1",
+          "goal": "Coordinate effective, timely searches that produce actionable leads for investigators and families."
+        },
+        {
+          "goal_id": "G2",
+          "goal": "Protect the privacy and safety of children and families involved in searches."
+        },
+        {
+          "goal_id": "G3",
+          "goal": "Maintain public trust and ensure ethical use of the system and data."
+        },
+        {
+          "goal_id": "G4",
+          "goal": "Ensure equitable and reliable detection across demographic groups and deployment contexts."
+        },
+        {
+          "goal_id": "G5",
+          "goal": "Avoid overloading organizational resources or investigators with low-value or duplicate alerts."
+        }
+      ],
+      "hazards": [
+        {
+          "hazard_id": "H1",
+          "goal_id": "G1",
+          "loss": "Investigators and families are diverted by false-positive matches (innocent people reported as sightings), causing wasted search resources, unnecessary distress to families, and potential legal or reputational exposure for the organization.",
+          "requirement_id": "REQ1",
+          "requirement": "Sightings communicated to investigators or families are supported by corroboration beyond an unverified automated match; investigators and operational partners do not act on or publicize uncorroborated automated-only matches as confirmed sightings."
+        },
+        {
+          "hazard_id": "H2",
+          "goal_id": "G2",
+          "loss": "Identifying images or precise location information about children or families are exposed to unauthorized parties (public, press, or malicious actors), causing privacy violations, safety risks for children, and loss of trust in the organization.",
+          "requirement_id": "REQ2",
+          "requirement": "Identifying images, precise location data, and case-specific sensitive information are disclosed only to authorized investigators and designated organizational partners involved in the active case; unauthorized disclosure to the public or unrelated third parties does not occur."
+        },
+        {
+          "hazard_id": "H3",
+          "goal_id": "G4",
+          "loss": "The system consistently misses or under-reports appearances of missing children from certain demographic groups or geographic areas, leading to unequal service, reduced recovery chances for those children, and reputational harm to the organization for discriminatory outcomes.",
+          "requirement_id": "REQ3",
+          "requirement": "Detection and reporting outcomes for searches do not exhibit systematic disparities by relevant demographic characteristics (e.g., age ranges, skin tone, or other protected characteristics) or by deployment context (e.g., device class or region); significant performance gaps are detectable and do not persist unaddressed."
+        },
+        {
+          "hazard_id": "H4",
+          "goal_id": "G3",
+          "loss": "System capabilities are misused by malicious actors or unintended parties to stalk, surveil, or otherwise harm children or families, damaging the organization's credibility and creating safety risks.",
+          "requirement_id": "REQ4",
+          "requirement": "Search initiation, access to identifying footage, and receipt of search results are available only to authorized case participants (investigators, the reporting family, and designated organizational staff) for active cases; unrelated third parties and the public do not gain access to identifying search outputs or the ability to initiate searches."
+        },
+        {
+          "hazard_id": "H5",
+          "goal_id": "G5",
+          "loss": "Investigative teams become overloaded by high volumes of low-quality, duplicate, or untimely alerts, causing delays in responding to genuine leads and inefficient use of limited organizational resources.",
+          "requirement_id": "REQ5",
+          "requirement": "Investigators and organizational coordinators receive a manageable number of prioritized, actionable leads per case such that duplicate, low-value, or excessive alerts do not cause investigator workloads to exceed operational capacity or delay timely response to high-priority cases."
+        }
+      ]
+    },
+    {
+      "stakeholder": "Dashcam manufacturer",
+      "goals": [
+        {
+          "goal_id": "G1",
+          "goal": "Ensure device reliability and user safety during normal operation and while running missing-child search features."
+        },
+        {
+          "goal_id": "G2",
+          "goal": "Protect user privacy and comply with data-protection regulations to avoid breaches and fines."
+        },
+        {
+          "goal_id": "G3",
+          "goal": "Control device resource use and operating costs so devices meet advertised battery, processing, and storage expectations."
+        },
+        {
+          "goal_id": "G4",
+          "goal": "Support deployment and coordination with authorities and partner organizations so searches function as contracted and updates can be applied as needed."
+        },
+        {
+          "goal_id": "G5",
+          "goal": "Maintain company reputation, limit legal liability, and preserve customer trust."
+        }
+      ],
+      "hazards": [
+        {
+          "hazard_id": "H1",
+          "goal_id": "G1",
+          "loss": "Dashcams overheat or suffer accelerated battery degradation while performing searches, causing device failure, vehicle damage, safety incidents, increased warranty claims, or product recalls that harm the manufacturer's finances and reputation.",
+          "requirement_id": "REQ1",
+          "requirement": "Dashcams remain operational and do not experience overheating, battery failure, or other safety-compromising malfunction during authorized search activities and under expected environmental and usage conditions."
+        },
+        {
+          "hazard_id": "H2",
+          "goal_id": "G2",
+          "loss": "Identifying images or location data captured by the dashcam are exposed to unauthorized parties, resulting in regulatory fines, class-action suits, and loss of customer trust for the manufacturer.",
+          "requirement_id": "REQ2",
+          "requirement": "Unauthorized parties do not gain access to identifying images, location information, or other personally identifying data collected by the dashcam."
+        },
+        {
+          "hazard_id": "H3",
+          "goal_id": "G3",
+          "loss": "Coordinated searches consume excessive mobile data or storage, causing users to incur unexpected charges or lose recorded footage; this results in increased support costs, returns, and negative customer feedback for the manufacturer.",
+          "requirement_id": "REQ3",
+          "requirement": "Performing coordinated searches does not cause users to incur unanticipated mobile-data charges or to lose existing recorded footage due to storage exhaustion without the user's explicit consent."
+        },
+        {
+          "hazard_id": "H4",
+          "goal_id": "G4",
+          "loss": "Incompatibility with investigators' workflows or inability to deploy updated models prevents the dashcam from delivering usable search results, leading to failed contracts, penalties, and diminished operational partnerships.",
+          "requirement_id": "REQ4",
+          "requirement": "Authorized investigators and partner organizations receive relevant sightings and associated footage from the dashcam in a manner and within timeframes that satisfy agreed coordination and operational requirements."
+        },
+        {
+          "hazard_id": "H5",
+          "goal_id": "G5",
+          "loss": "False matches generated by the dashcam lead to wrongful stops, harassment, or public identification of innocent people, causing legal claims, regulatory scrutiny, and severe reputational damage to the manufacturer.",
+          "requirement_id": "REQ5",
+          "requirement": "No person is treated by investigators or partner organizations as a confirmed sighting, detained, publicly identified, or otherwise subjected to adverse actions solely because of an automated dashcam match."
+        }
+      ]
+    },
+    {
+      "stakeholder": "ML model vendor / external contractor",
+      "goals": [
+        {
+          "goal_id": "G1",
+          "goal": "Deliver reliable detection performance so that legitimate sightings of a missing child are identified and useful to investigators."
+        },
+        {
+          "goal_id": "G2",
+          "goal": "Minimize false positives and misidentifications to avoid harm to uninvolved people and to limit legal and reputational exposure."
+        },
+        {
+          "goal_id": "G3",
+          "goal": "Ensure privacy-preserving operation and compliance so that identifying footage and location data are handled in ways that meet legal and stakeholder expectations."
+        },
+        {
+          "goal_id": "G4",
+          "goal": "Support robust deployability and operation across diverse dashcam hardware and connectivity conditions to avoid deployment failures and unexpected costs."
+        }
+      ],
+      "hazards": [
+        {
+          "hazard_id": "H1",
+          "goal_id": "G1",
+          "loss": "Legitimate appearances of a missing child in recorded footage are not identified or reported in time, resulting in missed investigative leads, contractual penalties, and reputational damage to the vendor.",
+          "requirement_id": "REQ1",
+          "requirement": "Relevant appearances of the missing child captured in dashcam footage under typical deployment conditions are reported to authorized investigators within a timeframe that allows timely follow-up by investigators."
+        },
+        {
+          "hazard_id": "H2",
+          "goal_id": "G2",
+          "loss": "Innocent people are mistakenly treated as sightings and publicly identified or investigated without sufficient corroboration, causing privacy violations, legal claims, and reputational harm to the vendor.",
+          "requirement_id": "REQ2",
+          "requirement": "People who do not match the missing child are not treated or disseminated as confirmed sightings solely because of an automated prediction; candidate matches provided to investigators must be clearly indicated as unconfirmed and accompanied by supporting contextual evidence before any public dissemination."
+        },
+        {
+          "hazard_id": "H3",
+          "goal_id": "G3",
+          "loss": "Identifying images or location information are exposed to unauthorized parties or used in ways that violate laws or agreements, leading to regulatory fines, contractual liability, and loss of trust in the vendor.",
+          "requirement_id": "REQ3",
+          "requirement": "Identifying images and location metadata collected or generated by dashcams are accessible only to authorized investigative parties and are not disclosed to unauthorized third parties or made publicly available."
+        },
+        {
+          "hazard_id": "H4",
+          "goal_id": "G4",
+          "loss": "Model deployments cause excessive resource use or incompatibilities on deployed dashcams (e.g., loss of other recordings, device instability, or unexpected recurring costs), resulting in product returns, support costs, and damage to the vendor's reputation.",
+          "requirement_id": "REQ4",
+          "requirement": "Search operations initiated on a dashcam do not cause loss of previously recorded footage, prevent the device from performing its normal functions, or require users to incur unexpected device-related costs (such as unanticipated mobile-data charges or premature hardware replacement) beyond typical usage expectations."
+        }
+      ]
+    },
+    {
+      "stakeholder": "System integrators / software developers",
+      "goals": [
+        {
+          "goal_id": "G1",
+          "goal": "Protect identifying data and maintain regulatory compliance and organizational reputation."
+        },
+        {
+          "goal_id": "G2",
+          "goal": "Ensure timely and reliable delivery of sighting reports to authorized investigators."
+        },
+        {
+          "goal_id": "G3",
+          "goal": "Prevent misuse of automated detections and minimize false-positive driven harm or workload."
+        },
+        {
+          "goal_id": "G4",
+          "goal": "Maintain consistent, stable behavior across heterogeneous dashcam hardware and power/storage constraints."
+        },
+        {
+          "goal_id": "G5",
+          "goal": "Respect user concerns about mobile-data usage, battery drain, and storage consumption to avoid opt-outs and complaints."
+        }
+      ],
+      "hazards": [
+        {
+          "hazard_id": "H1",
+          "goal_id": "G1",
+          "loss": "Unauthorized parties gain access to identifying images, location data, or personally identifying metadata, causing legal/regulatory penalties, reputational damage, and increased remediation workload for integrators.",
+          "requirement_id": "REQ1",
+          "requirement": "Unauthorized parties do not gain access to identifying images, location information, or personally identifying metadata collected, stored, or transmitted as part of the missing-child search process."
+        },
+        {
+          "hazard_id": "H2",
+          "goal_id": "G2",
+          "loss": "Investigators do not receive relevant sightings in time for the footage to be actionable, resulting in missed opportunities to locate a child and increased post-incident liability and support burden for developers.",
+          "requirement_id": "REQ2",
+          "requirement": "When the dashcam and coordinating systems have network connectivity sufficient for transmission, authorized investigators receive relevant sighting reports and accompanying contextual information within a timeframe in which the associated footage remains operationally useful."
+        },
+        {
+          "hazard_id": "H3",
+          "goal_id": "G3",
+          "loss": "High rates of false positives cause innocent people to be subject to investigation or public attention, eroding trust in the system and generating heavy support, legal, and remediation work for integrators.",
+          "requirement_id": "REQ3",
+          "requirement": "Automated detections are not treated as confirmed sightings on their own; people who do not match the missing child are not reported to investigators or third parties as confirmed sightings solely because of an automated prediction."
+        },
+        {
+          "hazard_id": "H4",
+          "goal_id": "G4",
+          "loss": "Inconsistent or resource-intensive behavior on some dashcam models causes device instability, loss of recorded footage, degraded primary recording functionality, or large numbers of device returns and support cases.",
+          "requirement_id": "REQ4",
+          "requirement": "Across the supported range of dashcam hardware models and typical power/storage states, the missing-child search feature does not cause persistent device instability, loss of previously recorded footage, or inability to perform the device's core driving-recording functions during normal operation."
+        },
+        {
+          "hazard_id": "H5",
+          "goal_id": "G5",
+          "loss": "Search operations trigger unexpected mobile-data charges, excessive battery drain, or large storage consumption, prompting user complaints, opt-outs, or disabling of the feature and increasing developer support demand.",
+          "requirement_id": "REQ5",
+          "requirement": "Search operations and any associated data transfers, storage usage, or processing invoked by the dashcam do not impose unexpected or undisclosed mobile-data, battery, or storage costs on device owners beyond what is communicated and consented to prior to initiating a coordinated search."
+        }
+      ]
+    },
+    {
+      "stakeholder": "Cloud service providers / data center operators",
+      "goals": [
+        {
+          "goal_id": "G1",
+          "goal": "Protect confidentiality and integrity of hosted data and prevent unauthorized access to identifying images and location metadata."
+        },
+        {
+          "goal_id": "G2",
+          "goal": "Maintain availability and performance of platform services for all customers, avoiding degradation due to hosted workloads."
+        },
+        {
+          "goal_id": "G3",
+          "goal": "Avoid legal and regulatory liability by ensuring hosted content and processing comply with applicable laws (including laws concerning child exploitation materials and data protection)."
+        },
+        {
+          "goal_id": "G4",
+          "goal": "Ensure predictable resource usage and cost exposure, preventing unexpected operational costs or capacity strain from customer workloads."
+        }
+      ],
+      "hazards": [
+        {
+          "hazard_id": "H1",
+          "goal_id": "G1",
+          "loss": "Identifying images or location metadata processed or stored by the dashcam service are exposed to unauthorized parties, causing regulatory fines, customer churn, and reputational damage to the provider.",
+          "requirement_id": "REQ1",
+          "requirement": "Identifying images and location information processed or stored on the provider's infrastructure are not accessible to unauthorized parties."
+        },
+        {
+          "hazard_id": "H2",
+          "goal_id": "G2",
+          "loss": "Dashcam-related workloads produce sustained resource consumption or traffic patterns that degrade availability or performance for other tenants, resulting in SLA breaches and operational disruption.",
+          "requirement_id": "REQ2",
+          "requirement": "Workloads attributable to the dashcam service do not cause sustained degradation of availability or performance for other hosted services or tenants."
+        },
+        {
+          "hazard_id": "H3",
+          "goal_id": "G3",
+          "loss": "The provider becomes legally exposed or subject to enforcement action because hosted data meets statutory definitions of illegal content (for example, prohibited child exploitation material) or violates data-protection or data-residency laws.",
+          "requirement_id": "REQ3",
+          "requirement": "Data and processing activities associated with the dashcam service comply with applicable criminal, data-protection, and data-residency laws, such that hosted collections do not include material that would subject the provider to criminal liability or regulatory enforcement."
+        },
+        {
+          "hazard_id": "H4",
+          "goal_id": "G4",
+          "loss": "Unexpected or abusive usage patterns from the dashcam system cause unplanned operational costs, capacity shortfalls, or require emergency scaling, harming the provider's financial predictability and planning.",
+          "requirement_id": "REQ4",
+          "requirement": "Resource consumption and network traffic generated by the dashcam service remain within agreed contractual usage patterns and do not impose unanticipated costs or emergency capacity requirements on the provider."
+        }
+      ]
+    },
+    {
+      "stakeholder": "Mobile carriers and hotspot providers",
+      "goals": [
+        {
+          "goal_id": "G1",
+          "goal": "Protect network capacity and control operating costs associated with high-volume or bursty data transfers."
+        },
+        {
+          "goal_id": "G2",
+          "goal": "Maintain compliance with privacy laws and lawful-access obligations when transporting personally identifying data."
+        },
+        {
+          "goal_id": "G3",
+          "goal": "Avoid being exploited as a channel for unauthorized data exfiltration or bulk transfer of unrelated content."
+        },
+        {
+          "goal_id": "G4",
+          "goal": "Limit reputational and support costs arising from customer privacy complaints, regulatory inquiries, or high-profile incidents involving transported content."
+        }
+      ],
+      "hazards": [
+        {
+          "hazard_id": "H1",
+          "goal_id": "G1",
+          "loss": "Large or poorly timed search-related uploads/downloads cause sustained congestion or degraded service for the provider's other customers, increasing churn and operational costs.",
+          "requirement_id": "REQ1",
+          "requirement": "Search-related transfers do not cause sustained degradation of network performance or availability for other customers on the same network segments."
+        },
+        {
+          "hazard_id": "H2",
+          "goal_id": "G2",
+          "loss": "The provider transports personally identifying images or precise location information without clear authorization, exposing the provider to privacy complaints, regulatory fines, or legal requests.",
+          "requirement_id": "REQ2",
+          "requirement": "Personally identifying images and precise location information are only transmitted over the provider's network when the transmission is authorized by the account holder or by a documented lawful investigator request, and the provider can distinguish authorized from unauthorized transmissions."
+        },
+        {
+          "hazard_id": "H3",
+          "goal_id": "G3",
+          "loss": "Malicious actors repurpose the dashcam data channel to exfiltrate large volumes of unrelated user data or contraband content, increasing the provider's exposure to abuse and legal risk.",
+          "requirement_id": "REQ3",
+          "requirement": "Network traffic identified as originating from dashcam search operations does not carry unrelated user data or high-volume payloads inconsistent with authorized search activity."
+        },
+        {
+          "hazard_id": "H4",
+          "goal_id": "G4",
+          "loss": "Privacy incidents or ambiguous transmissions generate regulatory investigations and customer support burdens because the provider cannot attribute or investigate what content was transported and why.",
+          "requirement_id": "REQ4",
+          "requirement": "Providers can correlate transported dashcam search traffic with the originating account or device and the authorization context so they can investigate and respond to privacy or regulatory inquiries."
+        }
+      ]
+    },
+    {
+      "stakeholder": "Members of the public / bystanders captured in footage",
+      "goals": [
+        {
+          "goal_id": "G1",
+          "goal": "Preserve personal privacy and avoid unwanted identification from incidental recordings."
+        },
+        {
+          "goal_id": "G2",
+          "goal": "Avoid being wrongly treated as a suspect or person of interest because of an automated match."
+        },
+        {
+          "goal_id": "G3",
+          "goal": "Prevent secondary uses or long-term retention of images that enable surveillance or tracking."
+        },
+        {
+          "goal_id": "G4",
+          "goal": "Limit unauthorized access, disclosure, or downstream sharing of identifying footage and location information."
+        }
+      ],
+      "hazards": [
+        {
+          "hazard_id": "H1",
+          "goal_id": "G2",
+          "loss": "A bystander is misidentified as the missing child and reported to investigators, leading to stops, questioning, harassment, or reputational harm.",
+          "requirement_id": "REQ1",
+          "requirement": "People who do not match the missing child are not reported to authorities as confirmed sightings or prioritized for enforcement actions solely because of an automated prediction."
+        },
+        {
+          "hazard_id": "H2",
+          "goal_id": "G1",
+          "loss": "Images of bystanders are retained and later searched or linked across cases, enabling ongoing identification and loss of anonymity in public spaces.",
+          "requirement_id": "REQ2",
+          "requirement": "Incidentally captured images of bystanders that are not demonstrably relevant to an active, authorized missing-child investigation are not retained or made available for future searches or cross-case linking."
+        },
+        {
+          "hazard_id": "H3",
+          "goal_id": "G4",
+          "loss": "Identifying footage or associated location metadata is accessed or shared with unauthorized parties (e.g., advertisers, third-party apps, or public leaks), causing privacy breaches, stalking, or commercial exploitation.",
+          "requirement_id": "REQ3",
+          "requirement": "Identifying images and location information of bystanders are not accessible to parties who are not authorized to participate in the specific, documented missing-child investigation."
+        },
+        {
+          "hazard_id": "H4",
+          "goal_id": "G3",
+          "loss": "Data derived from dashcam footage are used to infer sensitive attributes or to build searchable indices of bystanders (e.g., to trace attendance at events), leading to discrimination, chilling effects, or misuse by authorities or private actors.",
+          "requirement_id": "REQ4",
+          "requirement": "Footage and derived data are not used to infer, label, or create searchable records of bystanders' sensitive attributes or association patterns for purposes unrelated to the authorized missing-child search."
+        }
+      ]
+    },
+    {
+      "stakeholder": "Privacy and data-protection regulators",
+      "goals": [
+        {
+          "goal_id": "G1",
+          "goal": "Ensure personal data collection, use, and retention are limited to what is necessary and lawful (data minimization, purpose limitation, retention limits)."
+        },
+        {
+          "goal_id": "G2",
+          "goal": "Prevent unauthorized disclosure or misuse of identifying images and location data collected or derived by the dashcam system."
+        },
+        {
+          "goal_id": "G3",
+          "goal": "Maintain the ability to audit, investigate, and demonstrate compliance with data-protection obligations and citizens' rights."
+        },
+        {
+          "goal_id": "G4",
+          "goal": "Ensure that any sharing or transfer of personal data, including cross-border transfers, complies with applicable legal requirements and approvals."
+        }
+      ],
+      "hazards": [
+        {
+          "hazard_id": "H1",
+          "goal_id": "G1",
+          "loss": "Excessive or indefinite retention of dashcam footage and metadata unrelated to an active, authorized missing-child search, causing unlawful processing and noncompliance with retention and purpose-limitation rules.",
+          "requirement_id": "REQ1",
+          "requirement": "Footage and associated personal-data derived from dashcam recordings that do not pertain to an active, authorized missing-child search are not retained or made available for further processing beyond the legally permitted retention period and are not used for other purposes."
+        },
+        {
+          "hazard_id": "H2",
+          "goal_id": "G2",
+          "loss": "Unauthorized parties gain access to identifying images or location information from searches, resulting in privacy violations, harm to individuals, and regulatory enforcement actions against operators.",
+          "requirement_id": "REQ2",
+          "requirement": "Unauthorized parties do not gain access to identifying images or location information collected or derived during missing-child searches."
+        },
+        {
+          "hazard_id": "H3",
+          "goal_id": "G3",
+          "loss": "Regulators cannot obtain reliable records of processing activity (what data was collected, shared, or deleted), preventing effective investigation of complaints and enforcement of legal obligations.",
+          "requirement_id": "REQ3",
+          "requirement": "Regulators can obtain complete, time-stamped records sufficient to show which identifying footage and associated metadata were collected, accessed, shared, retained, or deleted for any specific missing-child search so compliance with applicable law can be verified."
+        },
+        {
+          "hazard_id": "H4",
+          "goal_id": "G4",
+          "loss": "Identifying footage or personal data is transferred to jurisdictions without a lawful transfer basis or regulatory authorization, causing breaches of cross-border data-transfer rules and potential sanctions.",
+          "requirement_id": "REQ4",
+          "requirement": "Identifying footage or personal data collected during searches is not exported or otherwise transferred to jurisdictions unless a lawful transfer basis or required regulatory authorization for that transfer is in place."
+        }
+      ]
+    },
+    {
+      "stakeholder": "Legal professionals and courts",
+      "goals": [
+        {
+          "goal_id": "G1",
+          "goal": "Understand and rely on the reliability and accuracy of person-recognition outputs when assessing evidence."
+        },
+        {
+          "goal_id": "G2",
+          "goal": "Obtain a clear, auditable chain of custody and provenance for footage and derived artifacts used as evidence."
+        },
+        {
+          "goal_id": "G3",
+          "goal": "Understand systematic errors and demographic performance differences so bias or discriminatory impacts can be evaluated."
+        },
+        {
+          "goal_id": "G4",
+          "goal": "Ensure that evidence is lawfully obtained and restricted to authorized use to prevent privacy violations and unlawful disclosure."
+        }
+      ],
+      "hazards": [
+        {
+          "hazard_id": "H1",
+          "goal_id": "G1",
+          "loss": "An innocent person is identified as the missing child based solely on the system's automated match, leading to wrongful investigation, detention, or reputational harm.",
+          "requirement_id": "REQ1",
+          "requirement": "Automated recognition outputs are not used by investigators or adjudicators as definitive proof of identity; any action that can materially affect a person's liberty or legal status must be based on additional human-reviewed or independently corroborated evidence."
+        },
+        {
+          "hazard_id": "H2",
+          "goal_id": "G2",
+          "loss": "Footage or derived outputs lack trustworthy provenance or handling records, rendering them inadmissible or unreliable as evidence in court.",
+          "requirement_id": "REQ2",
+          "requirement": "For each image, clip, or derived result presented for investigative or legal purposes, a persistent record of its origin, capture time, and handling events is preserved and made available to authorized legal parties for review."
+        },
+        {
+          "hazard_id": "H3",
+          "goal_id": "G3",
+          "loss": "The recognition system disproportionately misidentifies people from particular demographic groups, producing biased evidence and exposing agencies to discrimination claims.",
+          "requirement_id": "REQ3",
+          "requirement": "Known limitations and measured performance differences of the recognition system across demographic groups are documented and disclosed to investigators and legal counsel whenever footage or automated outputs are relied upon in an investigation or proceeding."
+        },
+        {
+          "hazard_id": "H4",
+          "goal_id": "G4",
+          "loss": "Identifying images or location data are accessed or disseminated by unauthorized parties, causing privacy violations, harassment, or legal liability that must be adjudicated.",
+          "requirement_id": "REQ4",
+          "requirement": "Identifying images and associated location information are not accessible to individuals or entities lacking legal authorization for the specific investigation and remain unavailable for public or unintended distribution."
+        }
+      ]
+    },
+    {
+      "stakeholder": "Insurance companies",
+      "goals": [
+        {
+          "goal_id": "G1",
+          "goal": "Minimize payouts and litigation costs resulting from incorrect identifications or wrongful actions triggered by the dashcam system."
+        },
+        {
+          "goal_id": "G2",
+          "goal": "Limit liability, regulatory fines, and compensation costs arising from unauthorized disclosure of personal or location data."
+        },
+        {
+          "goal_id": "G3",
+          "goal": "Reduce claims escalation and associated costs by ensuring timely, actionable reporting of legitimate sightings to investigators."
+        },
+        {
+          "goal_id": "G4",
+          "goal": "Prevent fraudulent or unauthorized use of the search feature that could create false incidents, unnecessary investigations, or increased claim frequency."
+        }
+      ],
+      "hazards": [
+        {
+          "hazard_id": "H1",
+          "goal_id": "G1",
+          "loss": "Incorrect person-recognition results lead to innocent people being treated as sightings, prompting unnecessary investigations, civil claims against vehicle owners or manufacturers, and insurer payouts for legal defense or settlements.",
+          "requirement_id": "REQ1",
+          "requirement": "People who do not match the missing child should not be reported to investigators or treated as confirmed sightings solely because of an automated prediction."
+        },
+        {
+          "hazard_id": "H2",
+          "goal_id": "G2",
+          "loss": "Identifying images or location histories recorded by dashcams are exposed to unauthorized parties, resulting in regulatory fines, compensation claims, and increased liability for covered entities that insurers must underwrite or defend.",
+          "requirement_id": "REQ2",
+          "requirement": "Unauthorized parties do not gain access to identifying images, location information, or other personal data that could lead to regulatory liability or compensation claims."
+        },
+        {
+          "hazard_id": "H3",
+          "goal_id": "G3",
+          "loss": "Relevant sightings are delayed, lost, or never reach authorized investigators, causing missed opportunities to recover the child, escalation of liability claims, and higher indemnity or reputational costs for insured parties.",
+          "requirement_id": "REQ3",
+          "requirement": "Relevant sighting information that could materially affect search outcomes is delivered to authorized investigators while it remains actionable for search and recovery efforts."
+        },
+        {
+          "hazard_id": "H4",
+          "goal_id": "G4",
+          "loss": "Malicious or unauthorized actors submit spurious search requests or manipulate reports to create false incidents, leading to unnecessary investigations, resource costs, and an increase in fraudulent or nuisance claims that insurers must cover.",
+          "requirement_id": "REQ4",
+          "requirement": "Search requests and any resulting sighting reports are initiated only for missing-child cases coordinated with recognized investigative authorities or designated partner organizations, and reported activities can be attributed to an accountable submitting party."
+        }
+      ]
+    },
+    {
+      "stakeholder": "Device repair technicians and support staff",
+      "goals": [
+        {
+          "goal_id": "G1",
+          "goal": "Prevent exposure of identifying images or precise location information during repair and support activities."
+        },
+        {
+          "goal_id": "G2",
+          "goal": "Have access to sufficient diagnostic information to reproduce and resolve device faults without unnecessary access to sensitive user data."
+        },
+        {
+          "goal_id": "G3",
+          "goal": "Ensure devices remain operational or are restorable after legitimate repairs and firmware updates so technicians can complete service tasks."
+        },
+        {
+          "goal_id": "G4",
+          "goal": "Prevent unauthorized parties from gaining maintenance-level access through support interfaces or communication channels used for repairs."
+        },
+        {
+          "goal_id": "G5",
+          "goal": "Preserve the integrity and provenance of data relevant to active missing-child investigations and provide auditable records of support activity."
+        }
+      ],
+      "hazards": [
+        {
+          "hazard_id": "H1",
+          "goal_id": "G1",
+          "loss": "Repair or support processes expose identifying images or precise location data from the dashcam to technicians, third parties, or bystanders, causing privacy breaches and potential legal liability for support staff.",
+          "requirement_id": "REQ1",
+          "requirement": "Unauthorized parties do not gain access to identifying images or precise location information stored on devices or transmitted during repair or support activities."
+        },
+        {
+          "hazard_id": "H2",
+          "goal_id": "G2",
+          "loss": "Technicians are unable to diagnose or reproduce reported faults because necessary diagnostic information is unavailable or unusable, leading to prolonged outages and increased support effort.",
+          "requirement_id": "REQ2",
+          "requirement": "Technicians can access sufficient non-identifying diagnostic information to reproduce and resolve reported device faults without accessing identifying images or precise location data."
+        },
+        {
+          "hazard_id": "H3",
+          "goal_id": "G3",
+          "loss": "Legitimate firmware updates or repair procedures render devices inoperable or degrade core recording/search functionality, causing downtime, additional repairs, or replacement costs for technicians and customers.",
+          "requirement_id": "REQ3",
+          "requirement": "After legitimate repair or update procedures, devices are either operational for their core recording and search functions or can be restored to operational condition by technicians within 72 hours."
+        },
+        {
+          "hazard_id": "H4",
+          "goal_id": "G4",
+          "loss": "Unauthorized remote parties exploit maintenance interfaces or common repair communication channels (e.g., local wireless or wired connections used in support) to obtain maintenance-level access, allowing data exfiltration or malicious modification that implicates technicians.",
+          "requirement_id": "REQ4",
+          "requirement": "Maintenance interfaces and repair communication channels are not accessible to unauthorized parties; maintenance-level access is only possible by authorized personnel."
+        },
+        {
+          "hazard_id": "H5",
+          "goal_id": "G5",
+          "loss": "Support staff inadvertently modify, delete, or fail to preserve images or logs relevant to active missing-child investigations, undermining investigations and exposing technicians and organizations to legal or reputational harm.",
+          "requirement_id": "REQ5",
+          "requirement": "Data and logs related to active missing-child investigations are preserved, and any access, modification, or deletion of those items is recorded and attributable so unintended changes are detectable."
+        }
+      ]
+    },
+    {
+      "stakeholder": "Malicious actors (abusers, stalkers, hackers)",
+      "goals": [
+        {
+          "goal_id": "G1",
+          "goal": "Obtain identifying images, location metadata, or recorded footage of chosen targets for surveillance or exploitation."
+        },
+        {
+          "goal_id": "G2",
+          "goal": "Remain anonymous and avoid attribution while interacting with the dashcam system or its partners."
+        },
+        {
+          "goal_id": "G3",
+          "goal": "Inject, manipulate, or submit false sightings or tampered footage to misdirect searches, create false leads, or falsely implicate others."
+        },
+        {
+          "goal_id": "G4",
+          "goal": "Disrupt, degrade, or evade coordinated search operations (e.g., by causing denial-of-service, flooding with spurious data, or blocking legitimate communications)."
+        }
+      ],
+      "hazards": [
+        {
+          "hazard_id": "H1",
+          "goal_id": "G1",
+          "loss": "Unauthorized parties obtain identifying images or location information from dashcam recordings or search results and use them to stalk, harass, or locate individuals.",
+          "requirement_id": "REQ1",
+          "requirement": "Identifying images, location metadata, and other footage that can be used to track or locate recorded individuals are not accessible to unauthorized parties."
+        },
+        {
+          "hazard_id": "H2",
+          "goal_id": "G2",
+          "loss": "Malicious actors are able to masquerade as investigators, partners, or device owners to receive sensitive search results or access capabilities reserved for authorized entities.",
+          "requirement_id": "REQ2",
+          "requirement": "Only authorized investigators and verified partner organizations receive confirmed sightings or identifying information; requests from unverified third parties are not treated as authorized."
+        },
+        {
+          "hazard_id": "H3",
+          "goal_id": "G3",
+          "loss": "Manipulated or false submissions from malicious actors cause investigators to pursue incorrect leads, expose innocent people, or divert resources from legitimate searches.",
+          "requirement_id": "REQ3",
+          "requirement": "Automated model outputs and unverified user submissions are not treated as confirmed sightings on their own; investigative actions require corroboration or verification before being escalated to field response."
+        },
+        {
+          "hazard_id": "H4",
+          "goal_id": "G4",
+          "loss": "Coordinated searches are delayed or degraded because malicious actors cause device unavailability, flood the system with spurious data, or otherwise interfere with communications and processing.",
+          "requirement_id": "REQ4",
+          "requirement": "Search coordination and delivery of relevant sightings to authorized investigators remain resilient to individual device failures and to attempts to overwhelm or interfere with the system, so authorized parties receive relevant sightings within an acceptable time window despite isolated interference."
+        }
+      ]
+    }
+  ]
+}
