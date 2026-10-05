@@ -1,0 +1,106 @@
+{
+  "stakeholders": [
+    {
+      "name": "Missing child",
+      "type": "indirect",
+      "description": "The child who is reported missing and whose likeness the system searches for in dashcam footage.",
+      "why_they_care": "The system's ability to locate them quickly affects their safety and well-being; incorrect matches or privacy breaches can cause harm."
+    },
+    {
+      "name": "Parent or legal guardian",
+      "type": "direct",
+      "description": "Individual(s) who report the child missing, provide reference images, and coordinate with authorities/non-profits.",
+      "why_they_care": "They depend on accurate, timely search results to find the child, and care about privacy, consent, and potential misuse of images."
+    },
+    {
+      "name": "Dashcam owner / vehicle owner",
+      "type": "direct",
+      "description": "Person who owns and operates the dashcam-equipped vehicle and controls device settings and data-sharing permissions.",
+      "why_they_care": "They manage privacy settings, data usage, battery/storage impact, potential liabilities from sharing footage, and expect benefit from participation (or protection from unwarranted intrusions)."
+    },
+    {
+      "name": "Vehicle occupants and passengers",
+      "type": "indirect",
+      "description": "People who ride in vehicles equipped with the dashcam and may be recorded in footage.",
+      "why_they_care": "They are affected by being recorded and by how their images are stored, processed, and shared; they have privacy and consent concerns."
+    },
+    {
+      "name": "Law enforcement agencies / police investigators",
+      "type": "direct",
+      "description": "Authorities coordinating missing-person searches, receiving potential leads, and acting on matches found by the system.",
+      "why_they_care": "They rely on timely, reliable evidence to find missing children, but must ensure legal compliance, chain-of-custody, and validate model outputs before investigative action."
+    },
+    {
+      "name": "Non-profit child-safety organization",
+      "type": "direct",
+      "description": "Partner organization that coordinates searches, aggregates reports, and routes alerts between families, dashcam operators, and authorities.",
+      "why_they_care": "They are responsible for coordinating effective searches, protecting families' privacy, ensuring ethical use of the system, and maintaining public trust."
+    },
+    {
+      "name": "Dashcam manufacturer",
+      "type": "direct",
+      "description": "Company that designs, produces, and updates the dashcam hardware and firmware.",
+      "why_they_care": "They must ensure device reliability, implement secure data storage and transmission, support model deployment/customization, manage warranties/liabilities, and address user concerns about battery/processing limits."
+    },
+    {
+      "name": "ML model vendor / external contractor",
+      "type": "direct",
+      "description": "Third-party supplier of the person-recognition model, responsible for development, updates, and possibly tuning for deployment.",
+      "why_they_care": "Model performance, bias, privacy-preserving design, and contractual obligations affect reputation, liability, and the effectiveness of searches; they may also need to support edge/cloud deployment constraints."
+    },
+    {
+      "name": "System integrators / software developers",
+      "type": "direct",
+      "description": "Engineers and teams integrating the ML model with dashcam firmware, mobile apps, cloud services, and coordination systems.",
+      "why_they_care": "They must ensure secure, efficient implementation across heterogeneous devices, manage trade-offs (edge vs. cloud), and address user-facing concerns like data usage and latency."
+    },
+    {
+      "name": "Cloud service providers / data center operators",
+      "type": "indirect",
+      "description": "Third-party platforms that may host model inference, storage, and coordination services if cloud processing is used.",
+      "why_they_care": "They provide scalability and availability; their security, uptime, and data-handling practices directly affect system reliability, costs, and privacy compliance."
+    },
+    {
+      "name": "Mobile carriers and hotspot providers",
+      "type": "indirect",
+      "description": "Cellular and Wi‑Fi providers through which dashcams or companion phones may upload/download footage and metadata.",
+      "why_they_care": "Network usage affects bandwidth costs, latency, and feasibility of real-time searches; providers may face policy or privacy inquiries related to transported data."
+    },
+    {
+      "name": "Members of the public / bystanders captured in footage",
+      "type": "indirect",
+      "description": "People who are incidentally recorded by dashcams while in public spaces.",
+      "why_they_care": "Unintended recording and potential retention/processing of their images raise privacy concerns, potential misidentification, and reputational risk."
+    },
+    {
+      "name": "Privacy and data-protection regulators",
+      "type": "indirect",
+      "description": "Government agencies and regulators setting legal requirements for personal data collection, processing, retention, and sharing.",
+      "why_they_care": "They must ensure the system complies with laws (e.g., data minimization, consent, cross-border transfers) and protect citizens' rights; noncompliance can lead to enforcement actions."
+    },
+    {
+      "name": "Legal professionals and courts",
+      "type": "indirect",
+      "description": "Attorneys and courts that may need to evaluate evidence produced by the system or adjudicate disputes arising from its use.",
+      "why_they_care": "They rely on understanding the system's accuracy, chain of custody, and potential biases when considering admissibility of evidence or liability claims."
+    },
+    {
+      "name": "Insurance companies",
+      "type": "indirect",
+      "description": "Insurers providing coverage for vehicles, dashcams, manufacturers, or organizations using the system.",
+      "why_they_care": "Claims related to misuse, privacy breaches, false leads, or device failures affect underwriting, premiums, and potential payouts."
+    },
+    {
+      "name": "Device repair technicians and support staff",
+      "type": "direct",
+      "description": "Technicians and customer support teams who service dashcams, handle firmware updates, and troubleshoot device issues.",
+      "why_they_care": "They need access to diagnostics and secure procedures for updates and repairs; improper handling can introduce vulnerabilities or data exposure."
+    },
+    {
+      "name": "Malicious actors (abusers, stalkers, hackers)",
+      "type": "indirect",
+      "description": "Individuals or groups who might attempt to exploit the system to track people, obtain sensitive footage, or disrupt searches.",
+      "why_they_care": "They may seek to weaponize system capabilities or vulnerabilities; the presence of such actors creates security and safety risks for other stakeholders."
+    }
+  ]
+}
